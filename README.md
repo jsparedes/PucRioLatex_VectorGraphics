@@ -1,4 +1,4 @@
-This repository is an alternative to compile vector images (.eps, .ps) in the [PUC-RIO template latex](http://www.puc-rio.br/ensinopesq/ccpg/apresentacao_ted.html). **However, images as png, jpeg, jpg can not be compiled**.
+This repository is an alternative to compile vector images (.eps, .ps) in the [PUC-RIO latex template](http://www.puc-rio.br/ensinopesq/ccpg/apresentacao_ted.html)(April 2016). **However, images as png, jpeg, jpg can not be compiled**.
 
 The Bibtex bibliography style is the same of the original template, take care using the key parameter.
 
