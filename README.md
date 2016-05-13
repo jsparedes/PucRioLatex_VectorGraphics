@@ -11,7 +11,8 @@ The main objectives are:
 Also, it is provided the use of square brackets in citations. In order to generate the pdf file using vector images, we can do in 3 ways:
 
 # 1. ShareLatex
-The source files are available in [ShareLatex](https://www.sharelatex.com/) as a Template. Only one condition must be fulfilled: set the compiler in LaTex mode, not pdfLaTeX.
+The [source files](https://github.com/warderm6/PucRioLatex_VectorGraphics/tree/master/sourceFiles) can be upload to [ShareLatex](https://www.sharelatex.com/). Only one condition must be fulfilled: set the compiler in LaTex mode, not pdfLaTeX.
+![buildDocument](ShareLatex.png)
 
 # 2. From an IDE as TeXstudio
 ## 2.1 Build & View
