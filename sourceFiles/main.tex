@@ -1,0 +1,182 @@
+%% -*- coding: utf-8; -*-
+
+\documentclass[
+  msc
+]{ThesisPUC}
+
+
+%%%
+%%% Additional Packages
+%%%
+
+  %% \usepackage[brazilian]{babel}      %% in ThesisPUC.cls
+  %% \usepackage[utf8]{inputenc}        %% .
+  %% \usepackage[T1]{fontenc}           %% .
+  %% \usepackage{lmodern}               %% .
+  %% \usepackage[pdftex]{graphicx}	%% .
+
+  \usepackage{tabularx}
+  \usepackage{multirow}
+  \usepackage{multicol}
+  \usepackage{colortbl}
+  \usepackage[%
+    dvipsnames,
+    svgnames,
+    x11names,
+    fixpdftex
+  ]{xcolor}
+  \usepackage{numprint}
+  \usepackage{textcomp}
+  \usepackage{booktabs}
+  \usepackage{amsmath}
+  \usepackage{enumitem}
+  \usepackage{amssymb}
+  \usepackage{textcomp}
+  
+  \usepackage{float}
+  \usepackage{color,colortbl,array}
+  \definecolor{GrayJ}{gray}{0.85}
+  
+  \usepackage{cite}
+  \renewcommand\citeleft{[}
+  \renewcommand\citeright{]}
+  
+  \graphicspath{{images/}}
+
+
+%% numprint 
+\npthousandsep{.}
+\npdecimalsign{,}
+
+%% ThesisPUC option
+%\tablesmode{figtab} %% [nada, fig, tab ou figtab]
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+
+%%%
+%%% New commands and other global definitions
+%%%
+
+\input{defs}
+
+
+%%%
+%%% Titulos
+%%%
+
+\author{Jorge Salvador Paredes Merino}
+\authorR{Paredes Merino, Jorge Salvador}
+
+\adviser{Ricardo Tanscheit}{Prof.}
+\adviserR{Tanscheit, Ricardo}
+
+\coadviser{Marley Maria Bernardes Rebuzzi Vellasco}{Dr.}
+\coadviserR{Vellasco, Marley Maria Bernardes Rebuzzi}
+%\coadviserInst{Centro de Tecnologia Mineral}{CETEM/MCTI}
+
+\title{Síntese Automática de Sistemas de Inferência Fuzzy para Classificação}
+
+\titleuk{Automatic Synthesis of Fuzzy Inference Systems for Classification}
+
+%% \subtitulo{Aqui vai o subtitulo caso precise}
+
+\day{21}
+\month{Dezembro}
+\year{2015}
+
+\city{Rio de Janeiro}
+\CDD{620.11}
+\department{Engenharia Elétrica}
+\program{Processamento de Sinais e Controle}
+\school{Centro Técnico Científico}
+\university{Pontifícia Universidade Católica do Rio de Janeiro}
+\uni{PUC-Rio}
+
+
+%%%
+%%% Jury
+%%%
+
+\jury{%
+	\jurymember{Jorge Luís Machado do Amaral}{Prof.}
+	{Faculdade de Engenharia}{UERJ}
+	\jurymember{Karla Tereza Figueiredo Leite}{Prof.}
+	{Departamento de Engenharia Elétrica}{PUC-Rio}
+  \schoolhead{José Eugenio Leal}{Prof.}
+}
+
+
+%%%
+%%% Resume
+%%%
+
+\resume{%
+Graduou-se em Engenharia Mecatrónica pela Universidad Nacional de Ingeniería (Lima, Perú)...}
+
+
+%%%
+%%% Acknowledgment
+%%%
+
+\acknowledgment{%
+  Em primeiro lugar, gostaria de agradecer especialmente a ...
+}
+
+
+%%%
+%%% Keywords
+%%%
+
+\keywords{%
+	\key{Sistemas de Inferência Fuzzy;}
+	\key{Classificação;}
+	\key{Interpretabilidade;}
+}
+
+\keywordsuk{%
+	\key{Fuzzy Inference System;}%
+	\key{Classification;}%
+	\key{Interpretability;}%
+}
+
+
+%%%
+%%% Abstract
+%%%
+
+\abstract{%
+  Hoje em dia, grande parte do ...
+}
+
+\abstractuk{%
+  Nowadays, much of the ...}
+
+
+%%%
+%%% Epigraph
+%%%
+
+\epigraph{%
+	Cada livro, cada volume que vês, tem alma. A alma de quem o escreveu e a alma dos que o leram e viveram e sonharam com ele. Cada vez que um livro muda de mãos, cada vez que alguém desliza o olhar pelas suas páginas, o seu espírito cresce e torna-se forte.
+}
+\epigraphauthor{Carlos Ruiz Zafón}
+\epigraphbook{A sombra do vento}
+
+
+%%%
+%%% 
+%%%
+
+\begin{document}
+
+  \input{abreviacoes}
+  \input{cap1}
+  \input{cap2}
+  \arial
+  \bibliography{referencias}
+  \normalfont
+  \input{appendix}
+
+\end{document}
