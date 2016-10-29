@@ -4,7 +4,7 @@
 %%
 %% Any modified versions of this file must be renamed
 %% with new filenames distinct from ThesisPUC.cls.
-%% 
+%%
 %% ----------------------------------------------------------------------------
 %%
 %% Thomas Lewiner
@@ -167,10 +167,10 @@
   colorlinks=true,%
   bookmarksopen=true,%
   breaklinks=true,%
-  linkcolor=blue,%
+  linkcolor=black,%
   anchorcolor=black,%
-  citecolor=cyan,%
-  urlcolor=red,%
+  citecolor=black,%
+  urlcolor=black,%
   pagecolor=black,%
   bookmarksnumbered=false%
 ]{hyperref}
@@ -937,10 +937,12 @@
   \puc@leftmargin{%
     \begin{tabular}{|p{0.95\linewidth}|} \hline%
       \noindent \puc@authorR \\ \\ \par%
-      \hspace*{.6cm} \puc@title\relax\ / \puc@author; orientador: \puc@adviser\ifthenelse{\equal{\puc@coadviser}{}}{}{; co-orientador\ifthenelse{\equal{\puc@coadviserII}{}}{}{es}: \puc@coadviser}\ifthenelse{\equal{\puc@coadviserII}{}}{}{, \puc@coadviserII}\ifthenelse{\equal{\puc@coadviserIII}{}}{}{, \puc@coadviserIII}. -- \puc@city\ : \puc@uni, Departamento de \puc@department, \puc@year. \\ \\ \par%
-      \hspace*{.6cm} v., \pageref{LastPage} f: il. ; 29,7 cm \\ \\ \par%
-      \hspace*{.6cm} 1.   \ifthenelse{\boolean{puc@phd}}{Tese (doutorado)}{Dissertação (mestrado)} - \puc@university, Departamento de \puc@department. \\ \\ \par%
-      \hspace*{.6cm} Inclui referências bibliográficas. \\ \\ \par%
+      \hspace*{.6cm} \puc@title\relax\ / \puc@author; orientador: \puc@adviser\ifthenelse{\equal{\puc@coadviser}{}}{}{; co-orientador\ifthenelse{\equal{\puc@coadviserII}{}}{}{es}: \puc@coadviser}\ifthenelse{\equal{\puc@coadviserII}{}}{}{, \puc@coadviserII}\ifthenelse{\equal{\puc@coadviserIII}{}}{}{, \puc@coadviserIII}. -- \puc@year. %\puc@city\ : \puc@uni, Departamento de \puc@department,  \\ \\ \par%
+      %\hspace*{.6cm} v.,
+      \\ 
+      \qquad \pageref{LastPage} f. : il. color.; 30 cm \\ \\ \par%
+      \hspace*{.6cm}    \ifthenelse{\boolean{puc@phd}}{Tese (doutorado)}{Dissertação (mestrado)} - \puc@university, Departamento de \puc@department. \\ \\ \par%
+      \hspace*{.6cm} Inclui bibliografia. \\ \\ \par%
       \hspace*{.6cm}%
         \newcounter{keycount}\setcounter{keycount}{1}%
         \renewcommand{\key}[1]{\arabic{keycount}. ##1.\addtocounter{keycount}{1}\ }%
@@ -1030,7 +1032,7 @@
   \par%
   \noindent \large \arial \textbf{Palavras-chave} \normalfont \normalsize%
   \par%
-  \renewcommand{\key}[1]{##1.\hspace{3mm} }%
+  \renewcommand{\key}[1]{##1\hspace{3mm} }%
   \indent \puc@keywords%
   \vspace*{\stretch{4}}%
   \par%
@@ -1051,7 +1053,7 @@
   \vspace{\stretch{3}}%
   \par\indent%
   \begin{minipage}{12cm}\singlespacing%
-  \puc@authorR; \puc@adviserR\ifthenelse{\equal{\puc@coadviser}{}}{}{; \puc@coadviserR}\ifthenelse{\equal{\puc@coadviserII}{}}{}{; \puc@coadviserIIR}\ifthenelse{\equal{\puc@coadviserIII}{}}{}{; \puc@coadviserIIIR}. \textbf{\puc@titleuk}. \puc@city, \puc@year. \pageref{LastPage}p.   \ifthenelse{\boolean{puc@phd}}{PhD Thesis}{MsC Thesis} -- Department of \puc@department, \puc@university.%
+  \puc@authorR; \puc@adviserR\ (Advisor)\ifthenelse{\equal{\puc@coadviser}{}}{}{; \puc@coadviserR}\ifthenelse{\equal{\puc@coadviserII}{}}{}{; \puc@coadviserIIR}\ifthenelse{\equal{\puc@coadviserIII}{}}{}{; \puc@coadviserIIIR}. \textbf{\puc@titleuk}. \puc@city, \puc@year. \pageref{LastPage}p.   \ifthenelse{\boolean{puc@phd}}{PhD Thesis}{MSc. Dissertation} -- Departamento de \puc@department, \puc@university.%
   \end{minipage}\onehalfspacing%
   \vspace*{\stretch{1}}%
   \par%
@@ -1064,7 +1066,7 @@
   \par%
   \noindent \large \arial \textbf{Keywords} \normalfont \normalsize%
   \par%
-  \renewcommand{\key}[1]{##1.\hspace{3mm} }%
+  \renewcommand{\key}[1]{##1\hspace{3mm} }%
   \indent \puc@keywordsuk%
   \vspace*{\stretch{4}}%
   \par%
@@ -1173,14 +1175,14 @@
   \puc@showfront%
   \puc@showjury%
   \puc@showcopyrights%
-  % 
+  %
   \ifthenelse{\boolean{hasdedication}}{\puc@showdedication}{}%
   \puc@showacknowledgment%
   \puc@showabstract%
   \puc@showabstractuk%
   \puc@showtables%
   \ifthenelse{\boolean{hasepigraph}}{\puc@showepigraph}{}%
-  % 
+  %
   \puc@setmargins@text%
   \ifthenelse{\boolean{puc@tight}}{}{\onehalfspacing}%
   \normalfont%
@@ -1190,8 +1192,8 @@
 \AtBeginDocument{%
   \renewcommand{\bibname}{Referencias Bibliograficas}%
   \bibliographystyle{ThesisPUC}%
-  \renewcommand{\key}[1]{#1. }
-  \special{ pdf: docinfo << /Author (\puc@author) /Title (\puc@title) /Keywords (\puc@keywords) >> }%
+  %\renewcommand{\key}[1]{#1. }
+  %\special{ pdf: docinfo << /Author (\puc@author) /Title (\puc@title) /Keywords (\puc@keywords) >> }%
 }
 \AfterBegin{document}{\makeatletter\puc@showfrontmatter\makeatother}
 
